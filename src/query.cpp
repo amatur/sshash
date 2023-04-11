@@ -45,7 +45,7 @@ int query(int argc, char** argv) {
     std::cout << "elapsed = " << t.elapsed() / 1000 << " millisec / ";
     std::cout << t.elapsed() / 1000000 << " sec / ";
     std::cout << t.elapsed() / 1000000 / 60 << " min / ";
-    std::cout << (t.elapsed() * 1000) / report.num_kmers << " ns/kmer" << std::endl;
+    // std::cout << (t.elapsed() * 1000) / report.num_kmers << " ns/kmer" << std::endl;
 
     return 0;
 }
