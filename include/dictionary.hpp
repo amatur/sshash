@@ -63,8 +63,7 @@ struct dictionary {
     /* Streaming queries. */
     friend struct streaming_query_canonical_parsing;
     friend struct streaming_query_regular_parsing;
-    streaming_query_report streaming_query_from_file(std::string const& filename,
-                                                     bool multiline) const;
+    void streaming_query_from_file(std::string const& filename) const;
 
     struct iterator {
         iterator(dictionary const* ptr, uint64_t kmer_id = 0) {
