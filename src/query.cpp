@@ -32,16 +32,16 @@ int query(int argc, char** argv) {
     t.stop();
     essentials::logger("DONE");
 
-    std::cout << "==== query report:\n";
-    std::cout << "num_kmers = " << report.num_kmers << std::endl;
-    std::cout << "num_positive_kmers = " << report.num_positive_kmers << " ("
-              << (report.num_positive_kmers * 100.0) / report.num_kmers << "%)" << std::endl;
-    std::cout << "num_searches = " << report.num_searches << "/" << report.num_positive_kmers
-              << " (" << (report.num_searches * 100.0) / report.num_positive_kmers << "%)"
-              << std::endl;
-    std::cout << "num_extensions = " << report.num_extensions << "/" << report.num_positive_kmers
-              << " (" << (report.num_extensions * 100.0) / report.num_positive_kmers << "%)"
-              << std::endl;
+    // std::cout << "==== query report:\n";
+    // std::cout << "num_kmers = " << report.num_kmers << std::endl;
+    // std::cout << "num_positive_kmers = " << report.num_positive_kmers << " ("
+    //           << (report.num_positive_kmers * 100.0) / report.num_kmers << "%)" << std::endl;
+    // std::cout << "num_searches = " << report.num_searches << "/" << report.num_positive_kmers
+    //           << " (" << (report.num_searches * 100.0) / report.num_positive_kmers << "%)"
+    //           << std::endl;
+    // std::cout << "num_extensions = " << report.num_extensions << "/" << report.num_positive_kmers
+    //           << " (" << (report.num_extensions * 100.0) / report.num_positive_kmers << "%)"
+    //           << std::endl;
     std::cout << "elapsed = " << t.elapsed() / 1000 << " millisec / ";
     std::cout << t.elapsed() / 1000000 << " sec / ";
     std::cout << t.elapsed() / 1000000 / 60 << " min / ";
