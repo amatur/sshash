@@ -23,9 +23,9 @@ void streaming_query_from_fasta_file(dictionary const* dict, std::istream& is) {
             char const* kmer = line.data() + i;
             auto answer = query.lookup_advanced(kmer);
             if( answer.kmer_id != constants::invalid_uint64){
-                std::cout<<answer.kmer_id<<std::endl;
+                std::cout<<kmer<<" "<<answer.kmer_id<<std::endl;
             }else{
-                std::cout<<-1<<std::endl;
+                std::cout<<kmer<<" "<<-1<<std::endl;
             }
         }
     }
