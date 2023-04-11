@@ -21,11 +21,10 @@ void streaming_query_from_fasta_file_multiline(dictionary const* dict, std::istr
         for (uint64_t i = 0; i != buffer.size() - k + 1; ++i) {
             char const* kmer = buffer.data() + i;
             auto answer = query.lookup_advanced(kmer);
-            report.num_kmers += 1;
             if( answer.kmer_id != constants::invalid_uint64){
-                cout<<answer.kmer_id<<std::endl;
+                std::cout<<answer.kmer_id<<std::endl;
             }else{
-                cout<<-1<<std::endl;
+                std::cout<<-1<<std::endl;
             }
         }
         if (empty_line_was_read) { /* re-start the kmers' buffer */
